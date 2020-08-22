@@ -1,11 +1,16 @@
 package com.segurosx.models;
 
-public class ClienteAsegurado extends Cliente {
+import java.util.ArrayList;
+import java.util.List;
 
+public class ClienteAsegurado extends Persona {
+
+    private final List<Seguro> seguros;
 
     public ClienteAsegurado(String nombre, CorreoMediator correoMediator) {
 
         super(nombre, correoMediator);
+        this.seguros = new ArrayList<Seguro>();
     }
 
     public void enviaCorreo()    {
@@ -14,5 +19,5 @@ public class ClienteAsegurado extends Cliente {
         correoMediator.enviaCorreoSMTP(this);
     }
 
-    
+        
 }

@@ -25,10 +25,10 @@ public class CorreoMediator implements ICorreoMediator {
     }
 
     @Override
-    public void enviaCorreoSMTP(Cliente cliente) {
+    public void enviaCorreoSMTP(Persona persona) {
 
         // enviando correo...
-        System.out.println(  preparaMensaje(cliente.getNombre()) );
+        System.out.println(  preparaMensaje(persona.getNombre()) );
         
     }
     

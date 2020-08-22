@@ -32,7 +32,17 @@ public class App
 
         CorreoMediator correoMediator = new CorreoMediator();
         ClienteAsegurado asegurado = new ClienteAsegurado("Pedro Pablo", correoMediator);
+        Contratante contratante = new Contratante("Alvaro", correoMediator);
+        Mediador mediador = new Mediador("Miguel", correoMediator);
+        Beneficiario beneficiario1 = new Beneficiario("Ramiro", correoMediator);
+        Beneficiario beneficiario2 = new Beneficiario("Paolo", correoMediator);
         asegurado.enviaCorreo();
+
+
+        /*seguro2.setContratante(contratante);
+        seguro2.setMediador(mediador);
+        seguro2.addBeneficiadrio(beneficiario1);
+        seguro2.addBeneficiadrio(beneficiario2);*/
 
 
         seguro2.addObserver(cliente);

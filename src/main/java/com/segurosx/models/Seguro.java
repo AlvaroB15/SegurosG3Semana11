@@ -14,6 +14,10 @@ public abstract class Seguro implements ISeguroObservable {
     protected Certificado certificado;
     protected Poliza poliza;
     protected Cliente cliente; // contratante
+    protected Persona persona;
+    protected Contratante contratante;
+    protected Mediador mediador;
+    protected List<Beneficiario> beneficiarios;
     protected String nivelRiesgo = "NINGUNO";
     protected String bancoTarjeta;
     protected String marca;
@@ -24,6 +28,7 @@ public abstract class Seguro implements ISeguroObservable {
         this.numero = new Integer(new Random().nextInt());
         this.certificado = new Certificado();
         this.contratantes = new ArrayList<IClienteObserver>();
+        this.beneficiarios = new ArrayList<Beneficiario>();
     }
 
     public Certificado getCertificado() {
@@ -58,6 +63,25 @@ public abstract class Seguro implements ISeguroObservable {
         this.cliente = cliente;
     }
 
+    public void setPersona(final Persona persona) {
+        this.persona = persona;
+    }
+
+    public void setContratante(final Contratante contratante) {
+        this.contratante = contratante;
+        addObserver(this.contratante);
+    }
+
+    public void setMediador(final Mediador mediador){
+    this.mediador = mediador;
+    addObserver(this.mediador);
+    }
+
+    public void addBeneficiadrio(Beneficiario beneficiario) {
+        this.beneficiarios.add(beneficiario);
+        addObserver(beneficiario);
+    }
+
     public Cliente getCliente() {
         return cliente;
     }
@@ -71,18 +95,18 @@ public abstract class Seguro implements ISeguroObservable {
         System.out.println("***********************************************************");
         System.out.println("Se modifico la Suma Asegurada, notificando... ");
         System.out.println("***********************************************************");
-        for( IClienteObserver a : this.contratantes) {
+        for (IClienteObserver a : this.contratantes) {
 
             a.notifica();
-        }        
+        }
     }
 
     public void addObserver(IClienteObserver observer) {
-        this.contratantes.add( observer );
+        this.contratantes.add(observer);
     }
 
     public void removeObserver(IClienteObserver observer) {
-        this.contratantes.remove( observer );
-    }   
+        this.contratantes.remove(observer);
+    }
 
 }
