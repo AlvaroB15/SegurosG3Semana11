@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.segurosx.AppTest" time="0.029" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.segurosx.AppTest" time="0.032" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="user.country" value="PE"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.7\bin"/>
-    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire9302250627558296963\surefirebooter9319957838497158041.jar C:\Users\User\AppData\Local\Temp\surefire9302250627558296963 2020-08-22T00-24-00_422-jvmRun1 surefire10686726318335535697tmp surefire_02022003012450546230tmp"/>
+    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire1136996657212954713\surefirebooter11871228935876121614.jar C:\Users\User\AppData\Local\Temp\surefire1136996657212954713 2020-08-22T03-33-17_817-jvmRun1 surefire2052241532779698374tmp surefire_016868713692093397702tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\User\Desktop\tarea11 patrones\SegurosG3Semana11\target\test-classes;C:\Users\User\Desktop\tarea11 patrones\SegurosG3Semana11\target\classes;C:\Users\User\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\User\.m2\repository\javax\mail\javax.mail-api\1.6.2\javax.mail-api-1.6.2.jar;C:\Users\User\.m2\repository\com\sun\mail\smtp\1.6.3\smtp-1.6.3.jar;C:\Users\User\.m2\repository\com\sun\mail\mailapi\1.6.3\mailapi-1.6.3.jar;C:\Users\User\.m2\repository\javax\mail\mailapi\1.4.3\mailapi-1.4.3.jar;C:\Users\User\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire9302250627558296963\surefirebooter9319957838497158041.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire1136996657212954713\surefirebooter11871228935876121614.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.7+8-LTS"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.segurosx.AppTest" time="0.002"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.segurosx.AppTest" time="0.004"/>
 </testsuite>

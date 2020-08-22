@@ -46,11 +46,22 @@ public class Cliente implements IClienteObserver {
 
     }
 
+    public CorreoMediator getCorreoMediator() {
+        return correoMediator;
+    }
+
+    public void setCorreoMediator(CorreoMediator correoMediator) {
+        this.correoMediator = correoMediator;
+    }
+    
     @Override
-    public void notifica()   {
+    public void notifica(String msg)   {
 
         try {
             System.out.println("Notificando al cliente " + this.nombre);
+            correoMediator.setServidorCorreoSMTP("587");
+            correoMediator.enviaCorreoSMTP(this,msg);
+            
         }
         catch(Throwable t) {
             System.out.println("Notificacion con error" + t.getMessage() );

@@ -73,7 +73,11 @@ public abstract class Seguro implements ISeguroObservable {
         System.out.println("***********************************************************");
         for( IClienteObserver a : this.contratantes) {
 
-            a.notifica();
+            a.notifica("***********************************************************\n"
+                      + "Se modifico la Suma Asegurada, notificando... \n"
+                    + "***********************************************************");
+                    
+                    
         }        
     }
 

@@ -6,6 +6,6 @@ public interface ICorreoMediator {
 
     void setServidorCorreoSMTP(String servidorIP);
 
-    void enviaCorreoSMTP(Cliente cliente);
+    void enviaCorreoSMTP(Cliente cliente,String msg);
 
 }

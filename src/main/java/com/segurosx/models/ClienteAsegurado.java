@@ -13,8 +13,15 @@ public class ClienteAsegurado extends Cliente {
     public void enviaCorreo()    {
 
         correoMediator.setServidorCorreoSMTP("587");
-        correoMediator.enviaCorreoSMTP(this);
+        correoMediator.enviaCorreoSMTP(this," ");
+        
+        
     }
+    @Override
+    public void  notifica(String msg){
+        super.notifica(msg);
+    }
+
 
     
 }

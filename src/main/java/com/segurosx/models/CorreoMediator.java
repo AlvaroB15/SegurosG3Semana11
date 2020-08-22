@@ -34,7 +34,7 @@ public class CorreoMediator implements ICorreoMediator {
     }
 
     @Override
-    public void enviaCorreoSMTP(Cliente cliente) {
+    public void enviaCorreoSMTP(Cliente cliente,String msg) {
         prop.setProperty("mail.smtp.host","smtp.gmail.com");
         prop.setProperty("mail.smtp.starttls.enable", "true");
         prop.setProperty("mail.smtp.port", servidorSMTP); //El puerto SMTP seguro de Google
@@ -46,7 +46,7 @@ public class CorreoMediator implements ICorreoMediator {
         String contraseño = "rrjvkcinpysbpoeu";
         String destinatario = "miguel.ramirez7@unmsm.edu.pe";
         String asunto = "Notificacion Seguro";
-        String mensaje = preparaMensaje(cliente.getNombre());
+        String mensaje = preparaMensaje(cliente.getNombre())+msg;
         
         MimeMessage mail = new MimeMessage(session);
         
@@ -61,7 +61,7 @@ public class CorreoMediator implements ICorreoMediator {
             trans.sendMessage(mail, mail.getRecipients(Message.RecipientType.TO));
             trans.close();
             
-            JOptionPane.showMessageDialog(null, "mensaje enviado");
+            JOptionPane.showMessageDialog(null, "mensaje enviado a cliente: " + cliente.getNombre());
             
         } catch (MessagingException me) {
             me.printStackTrace();   //Si se produce un error
