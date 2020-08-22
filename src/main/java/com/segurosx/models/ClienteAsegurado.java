@@ -1,7 +1,9 @@
 package com.segurosx.models;
 
-public class ClienteAsegurado extends Cliente {
+import java.util.Properties;
 
+public class ClienteAsegurado extends Cliente {
+   
 
     public ClienteAsegurado(String nombre, CorreoMediator correoMediator) {
 
@@ -10,7 +12,7 @@ public class ClienteAsegurado extends Cliente {
 
     public void enviaCorreo()    {
 
-        correoMediator.setServidorCorreoSMTP("10.20.5.107");
+        correoMediator.setServidorCorreoSMTP("587");
         correoMediator.enviaCorreoSMTP(this);
     }
 
